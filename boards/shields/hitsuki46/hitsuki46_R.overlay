@@ -3,6 +3,7 @@
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
 
 //=============================================================================
 // Trackball Mode Configuration
@@ -49,6 +50,7 @@
         compatible = "zmk,input-listener";
         status = "okay";
         device = <&trackball_left_split>;
+　　　　input-processors = <&zip_temp_layer 8 10000>;
 
 #if LEFT_TRACKBALL_MODE == 1
         // SCROLL MODE: Always scroll
@@ -175,6 +177,14 @@
         // Enable wakeup from sleep via trackball motion
         wakeup-source;
     };
+};
+
+&zip_temp_layer {
+    excluded-positions = <
+        16 // J
+        17 // K
+        18 // l
+    >;
 };
 
 // Override led_strip to set red color for right side
