@@ -50,8 +50,6 @@
         status = "okay";
         device = <&trackball_left_split>;
         input-processors = <&zip_temp_layer 8 10000>;
-    };
-};
 
 #if LEFT_TRACKBALL_MODE == 1
         // SCROLL MODE: Always scroll
@@ -59,6 +57,7 @@
             <&xy_clipper>,
             <&zip_xy_to_scroll_mapper>,
             <&zip_scroll_scaler 2 5>;
+　　　　};
 #else
         // CURSOR MODE: Normal cursor with auto mouse layer
         // Y-axis transform needed because sensor has invert-x/y for 180deg orientation
