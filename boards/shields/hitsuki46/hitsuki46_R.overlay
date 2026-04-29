@@ -3,7 +3,6 @@
 #include <dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
 
 //=============================================================================
 // Trackball Mode Configuration
